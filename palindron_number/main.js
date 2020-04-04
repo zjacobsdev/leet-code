@@ -1,4 +1,6 @@
-/* Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
+/* First Attempt: 4/3/2020
+
+Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
 
 Example 1:
 
@@ -20,11 +22,30 @@ Coud you solve it without converting the integer to a string?
 
 */
 
+//with converted string
 var isPalindrome = function(x) {
+    let numStr = x.toString()
     
+    let newStr = numStr.split('').reverse().join('')
+    
+    if(numStr === newStr){
+        console.log(true)
+        
+        return true
+        
+    }else{
+        console.log(false)
+        return false
+    }
 };
 
-
 ////////Test Cases///////
+
+isPalindrome(121)
+isPalindrome(-121)
+isPalindrome(365)
+isPalindrome(10101)
+
+
 
 
